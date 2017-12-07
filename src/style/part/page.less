@@ -13,7 +13,7 @@ body {
 }
 
 .wrap {
-	max-width: 1240px;
+	max-width: 1220px;
 	margin: 0 auto;
 }
 
@@ -47,7 +47,11 @@ body {
 }
 
 .head-price {
-    padding-right: 30px;
+    display: block;
+    border-bottom: 1px solid #bac8bd;
+    height: 22px;
+    font-weight: 700;
+    margin-right: 30px;
 }
 
 .head-phone {
@@ -66,20 +70,19 @@ body {
 
 .head-menu {
     position: fixed;
-    top: 250px;
-    left: 6.5vw;
+    top: 200px;
+    left: 5.5vw;
     display: inline-block;
     padding-right: 85px;
     transform: rotate(-90deg);
     transform-origin: 0 100%;
-
+    font-size: 18px;
     &:before {
         content: "";
         .sprite(@menu);
-        transform: scale(0.5);
         display: block;
         position: absolute;
-        top: -12px;
+        top: -8px;
         right: 0;
         transform: rotate(90deg) scale(0.6);
     }
@@ -91,7 +94,7 @@ body {
         height: 1px;
         background: @green;
         position: absolute;
-        top: 10px;
+        top: 13px;
         right: 60px;
     }
 }
@@ -101,13 +104,36 @@ body {
 }
 
 .head-order {
-    
+    position: fixed;
+    right: 1.5vw;
+    transform: rotate(90deg);
+    transform-origin: 0 100%;
+    top: 150px;
+    &:after {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 1px;
+        background: @green;
+        position: absolute;
+        top: 12px;
+        right: 80px;
+    }
+
+    &:before {
+        content: "";
+        .sprite(@phone);
+        position: absolute;
+        top: -18px;
+        right: 90px;
+        transform: rotate(-90deg) scale(0.6);
+    }
 }
 
 .head-social {
     position: fixed;
-    bottom: 90px;
-    left: 6.5vw;
+    bottom: 60px;
+    left: 5.5vw;
     transform: rotate(-90deg);
     transform-origin: 0 100%;
 
@@ -118,7 +144,7 @@ body {
 }
 
 .slider {
-    width: 75vw;
+    width: 80vw;
     margin: 0 auto;
     background: #f6f5e7;
 
@@ -128,7 +154,7 @@ body {
         width: 100%;
         background-image: url(../img/mask.png);
         background-repeat: no-repeat;
-        height: 116px;
+        height: 124px;
         background-position: 50% 100%;
         bottom: 0;
     }
@@ -165,7 +191,7 @@ body {
     font-size: 12px;
     color: #fff;
     background: @green;
-    padding: 20px 35px;
+    padding: 15px 35px;
 }
 
 .slider-img {
@@ -196,9 +222,9 @@ body {
 
 .service {
     background: @green;
-    width: 75vw;
+    width: 80vw;
     margin: 0 auto;
-    padding: 200px 110px;
+    padding: 200px 0px;
     background-image: url(../img/bg.png);
     background-position: center;
     background-attachment: fixed;
@@ -221,7 +247,7 @@ body {
         width: 100%;
         background-image: url(../img/mask.png);
         background-repeat: no-repeat;
-        height: 116px;
+        height: 136px;
         background-position: 50% 100%;
         bottom: 0;
         left: 0;
@@ -237,7 +263,7 @@ body {
 }
 
 .tabs {
-        
+    
 }
 
 .tab-list {
@@ -266,7 +292,11 @@ body {
 }
 
 .service-list {
-    
+    margin: 0 auto;
+    width: 1220px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .service-one {
@@ -280,9 +310,7 @@ body {
     vertical-align: top;
     position: relative;
     font-weight: 700;
-    background: #5a7a63;
     margin-bottom: 75px;
-
     el {
         display: block;
         position: absolute;
@@ -290,6 +318,7 @@ body {
         color: #f5f0ad;
         font-size: 12px;
         font-weight: 700;
+        z-index: 2;
         &:before {
             content: "";
             position: absolute;
@@ -300,8 +329,294 @@ body {
             background: #f5f0ad;
         }
     }
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background: #5a7a63;
+        transition: all 0.4s;
+        clip-path: polygon(0% 0%, 50% 30px, 100% 0%, 100% 230px, 50% 260px, 0 230px);
+    }
+
+    span {
+        position: relative;
+        z-index: 2;
+        line-height: 34px;
+        display: inline;
+        font-size: 22px;
+        border-bottom: 1px solid #9cafa1;
+    }
+
+    &:hover {
+        &:after {
+            transform: scale(1.02);
+            background: #f6f5e7;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        span {
+            color: @green;
+        }
+
+        el {
+            color: @red;
+
+            &:before {
+                background: @red;
+            }
+        }
+    }
+
 }
 
 .service-more {
+        text-align: center;
+        color: #fff;
+
+        a {
+            background: @yellow;
+            display: inline-block;
+            vertical-align: middle;
+            padding: 10px 15px;
+        }
+
+        span {
+            text-transform: uppercase;
+            font-size: 12px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 15px;
+        }
+}
+
+.news-more {
+    text-align: center;
+    color: @green;
+
+    a {
+        background: @green;
+        display: inline-block;
+        vertical-align: middle;
+        padding: 10px 15px;
+        color: #fff;
+    }
+
+    span {
+        text-transform: uppercase;
+        font-size: 12px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 15px;
+    }
+}
+
+.news {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 80px 0px 90px;
+}
+
+.news-title {
+    font-family: @font-title;
+    font-size:  48px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.news-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.news-one {
+    width: 330px;
+    margin-bottom: 70px;
+    padding-left: 30px;
+}
+
+.news-one__img {
+    margin-left: -30px;
+    margin-bottom: 20px;
+    display: block;
+    img {
+        width: 100%;
+    }
+}
+
+.news-one__date {
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.news-one__title {
+    font-size: 21px;
+    line-height: 28px;
+    border-bottom: 1px solid #9cafa1;
+
+    &:hover {
+        color: @red;
+        border-bottom-color: transparent;
+    }
+}
+
+.footer {
+    
+}
+
+.footer-inn {
+    background: @green;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 90px 0px;
+    background-image: url(../img/bg.png);
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+.footer-top {
+    margin-bottom: 90px;
+}
+
+.footer-menu {
+    a {
+        font-size: 16px;
+        font-weight: 700;
+        display: inline-block;
+        border-bottom: 1px solid #9cafa1;
+        margin-right: 120px;
+        color: #fff;
+
+        &:hover {
+            border-bottom-color: transparent;
+        }
+    }
+}
+
+.footer-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid #9fb1a4;
+    padding: 8px 15px;
+}
+
+.footer-middle {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    width: 25%;
+
+    img {
+        width: 120px;
+    }
+}
+
+.footer-text {
+    width: 30%;
+    margin-bottom: 80px;
+
+    p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    a {
+        color: #fff;
+        border-bottom: 1px solid #9fb1a4;
+
+        &:hover {
+            border-bottom-color: transparent;
+        }
+    }
+}
+
+.footer-text__title {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer-social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    a {
+        display: inline-block;
+        position: relative;
+        color: #fff;
+        padding-left: 60px;
+        &:hover {
+            span {
+                border-bottom-color: transparent;
+            }
+        }
+    }
+
+    span {
+        border-bottom: 1px solid #9fb1a4;
+        display: inline-block;
         
+        &:before {
+            content: "";
+            width: 20px;
+            height: 1px;
+            display: block;
+            background: #fff;
+            position: absolute;
+            top: 12px;
+            left: 25px;
+        }
+    }
+
+    i {
+        display: inline-block;
+        transform: scale(0.5);
+        position: absolute;
+    }
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 40px 0;
+    color: #737373;
+    font-size: 12px;
+}
+
+.icon-vk {
+    .sprite(@vk);
+    top: 3px;
+    left: -15px;
+}
+
+.icon-ok {
+    .sprite(@ok);
+    top: -5px;
+    left: -10px;
+}
+
+.icon-fb {
+    .sprite(@facebook);
+    top: -5px;
+    left: -10px;
+}
+
+.icon-g {
+    .sprite(@google);
+    top: -2px;
+    left: -15px;
 }
