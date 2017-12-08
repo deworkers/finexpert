@@ -17,7 +17,7 @@ $(document).ready(function() {
     /*Модальные окна*/
     var overlay = $('#overlay'); 
     var open_modal = $('.open-modal'); 
-    var close = $('.modal__close'); 
+    var close = $('.modal-close'); 
     var modal = $('.modal'); 
 
     // для открытия модалки нужна ссылка вида <a href="#name"></a> и класс "open_modal"

@@ -61,7 +61,7 @@
 
     .head-social {
         position: fixed;
-        bottom: 60px;
+        bottom: 30px;
         left: 5.5vw;
         transform: rotate(-90deg);
         transform-origin: 0 100%;
@@ -72,8 +72,14 @@
         }
     }
 
+    .head-order {
+        top: 110px;
+        right: .5vw;
+    }
+
     .head-menu {
         font-size: 16px;
+        top: 160px;
     }
 
     .head {
@@ -135,7 +141,35 @@
     .news-one__title {
         font-size: 17px;
     }
+    
+    .menu-close {
+        height: 200px;
+    }
 
+    .modal--menu {
+        padding: 40px 0px;
+    }
+
+    @menu-padding: 70px;
+
+    .menu-logo {
+        margin-bottom: @menu-padding;
+        margin-left: @menu-padding;
+        img {
+            width: 140px;
+        }
+    }
+
+    .menu-list {
+        a {
+            font-size: 24px;
+            padding: 0 @menu-padding;
+        }
+    }
+
+    .menu-list ul ul {
+        padding: 70px @menu-padding;
+    }
 }
 
 @media screen and (max-width: 1360px) {
@@ -151,6 +185,10 @@
     .wrap {
         width: 800px;
         margin: 0 auto;
+    }
+
+    .slider-img {
+        background-position: 200% 0;
     }
 
     .news-one,
@@ -173,7 +211,7 @@
     }
 
     .head-menu {
-        left: 4.5vw;
+        left: 4vw;
         top: 160px;
 
         &:before {
@@ -182,7 +220,7 @@
     }
 
     .head-social {
-        left: 4.5vw;
+        left: 4vw;
         bottom: 30px;
     }
 
@@ -194,6 +232,42 @@
 
     .head-order {
         top: 110px;
-        right: -1vw;
+        right: -3vw;
+    }
+
+    .menu-close {
+        height: 200px;
+        width: 6.5vw;
+
+        &:before {
+            transform: scale(.4);
+        }
+    }
+
+    .modal--menu {
+        width: 43.5vw;
+        left: 6.5vw;
+    }
+
+    @menu-padding: 50px;
+
+    .menu-logo {
+        margin-bottom: @menu-padding;
+        margin-left: @menu-padding;
+        img {
+            width: 140px;
+        }
+    }
+
+    .menu-list {
+        a {
+            font-size: 24px;
+            padding: 0 @menu-padding;
+        }
+    }
+
+    .menu-list ul ul {
+        padding: 70px @menu-padding;
+        width: 43.5vw;
     }
 }
