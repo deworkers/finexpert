@@ -28,14 +28,34 @@ $(document).ready(function() {
         });
     }
 
+    $('.tab-list__one').on('click', function() {
+        $(this).parents('.tab-list').find('.tab-list__one').removeClass('active');
+        $(this).addClass('active');
+        idx = $(this).index();
+
+        $(this).parents('.tabs').find('.tab-one').hide().removeClass('open');
+        $(this).parents('.tabs').find('.tab-one').eq(idx).show().addClass('open');
+    });
+
+    var mainSlider = new Swiper('.slider', {
+        speed: 400,
+        spaceBetween: 30,
+        slidesPerView: 1,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        effect: 'fade',
+    });
+
 });
 
 
 
 $(window).scroll(function() {
     if ( $('html, body').scrollTop() > 100 ) {
-        $('.head-menu, .head-order').addClass('srcolled');
+        $('.head-menu, .head-order, .go-top').addClass('srcolled');
     } else {
-        $('.head-menu, .head-order').removeClass('srcolled');
+        $('.head-menu, .head-order, .go-top').removeClass('srcolled');
     }
 });

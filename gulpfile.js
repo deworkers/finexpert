@@ -134,6 +134,7 @@ gulp.task('sprite:build', function() {
             .pipe(spritesmith({
                 imgName: 'sprite.png',
                 cssName: 'sprite.less',
+                padding: 2,
                 cssFormat: 'less',
                 algorithm: 'binary-tree',
                 imgPath: '../img/sprite.png'
