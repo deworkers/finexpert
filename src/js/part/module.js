@@ -29,7 +29,6 @@ $(document).ready(function() {
         overlay.fadeIn(400);
         $(div).fadeIn(400);
         $('html, body').addClass('j-noScroll');
-        baseBoxHeight = $('.mobile-menu__right').height();
     });
 
     close.click(function() {

@@ -68,6 +68,10 @@ body {
     }
 }
 
+.head-phone--menu {
+    display: none;
+}
+
 .head-menu {
     position: fixed;
     top: 200px;
@@ -122,7 +126,7 @@ body {
 
 .go-top {
     position: fixed;
-    right: 1.5vw;
+    right: 3.5vw;
     bottom: 30px;
     width: 30px;
     height: 30px;
@@ -196,6 +200,10 @@ body {
     }
 }
 
+.head-order--menu {
+    display: none;
+}
+
 .head-social {
     position: fixed;
     bottom: 60px;
@@ -221,7 +229,7 @@ body {
         background: #fff;
         border-radius: 50%;
         top: auto;
-        bottom: 115px;
+        bottom: 200px;
         right: 70px;
         &:before {
             content: "";
@@ -244,7 +252,7 @@ body {
         background: #fff;
         border-radius: 50%;
         top: auto;
-        bottom: 115px;
+        bottom: 200px;
         left: auto;
         right: 140px;
         &:before {
@@ -472,8 +480,8 @@ body {
     }
 
     &:hover {
+            transform: scale(1.05);
         &:after {
-            transform: scale(1.02);
             background: #f6f5e7;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
         }
@@ -901,4 +909,100 @@ body {
         width: 380px;
         transform-origin: 0% 0%;
     }
+}
+    .order-form {
+        padding: 80px 50px;
+    }
+
+    .order-form__title {
+        font-size: 34px;
+        margin-bottom: 60px;
+        font-family: @font-title;
+        color: #fff;
+        font-weight: 700;
+    }
+
+    .form-line {
+        margin-bottom: 30px;
+        input {
+            height: 50px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            padding: 0 15px;
+            width: 100%;
+        }
+
+        button {
+            width: 160px;
+            height: 60px;
+            background: #f5f0ad;
+            color: @green;
+            font-size: 14px;
+            text-transform: uppercase;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+
+
+
+@media screen and (min-width: 1024px) {
+    
+    @keyframes fadeInLeftRotated {
+      from {
+        opacity: 0;
+        transform: rotate(-90deg) translate3d(0, -100%, 0);
+      }
+
+      to {
+        opacity: 1;
+        transform: rotate(-90deg);
+      }
+    }
+
+    .fadeInLeftRotated {
+      animation-name: fadeInLeftRotated;
+    }
+
+    @keyframes fadeInRightRotated {
+      from {
+        opacity: 0;
+        transform: rotate(90deg) translate3d(0, -100%, 0);
+      }
+
+      to {
+        opacity: 1;
+        transform: rotate(90deg);
+      }
+    }
+
+    .fadeInRightRotated {
+      animation-name: fadeInRightRotated;
+    }
+
+    .hidden {
+        visibility: hidden;
+        transform: translate3d(-100px, 0px, 0);
+    }
+
+
+    @keyframes fadeInUpSlide {
+      from {
+        opacity: 0;
+        transform: translate3d(-100px, 0px, 0);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .fadeInUpSlide {
+        animation-duration: 1s;
+        animation-name: fadeInUpSlide;
+    }
+    
 }

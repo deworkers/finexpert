@@ -170,6 +170,13 @@
     .menu-list ul ul {
         padding: 70px @menu-padding;
     }
+
+    .slider {
+        .swiper-button-next, 
+        .swiper-button-prev {
+            bottom: 120px;
+        }
+    }
 }
 
 @media screen and (max-width: 1360px) {
@@ -180,6 +187,13 @@
         width: 87vw;
     }
 
+    .slider {
+        .swiper-button-next, 
+        .swiper-button-prev {
+            bottom: 100px;
+        }
+    }
+
     .news,
     .service-list,
     .wrap {
@@ -188,7 +202,7 @@
     }
 
     .slider-img {
-        background-position: 200% 0;
+        background-position: 50% 50%;
     }
 
     .news-one,
@@ -249,6 +263,11 @@
         left: 6.5vw;
     }
 
+    .modal--order {
+        width: 43.5vw;
+        right: 6.5vw;
+    }
+
     @menu-padding: 50px;
 
     .menu-logo {
@@ -269,5 +288,9 @@
     .menu-list ul ul {
         padding: 70px @menu-padding;
         width: 43.5vw;
+    }
+
+    .go-top {
+        right: 2vw;
     }
 }

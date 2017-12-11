@@ -30,6 +30,17 @@
         right: 80px;
     }
 
+    .head-phone--menu {
+        display: block;
+        color: #fff;
+        bottom: auto !important;
+        top: 35px;
+
+        span {
+            color: #fff;
+        }
+    }
+
     .head-logo {
         top: 0;
         left: 80px;
@@ -66,6 +77,16 @@
             right: 0;
             transform: rotate(0) scale(0.52);
             transform-origin: 50% 50%;
+        }
+    }
+
+    .head-order--menu {
+        display: block;
+        top: 27px;
+        right: 6px;
+        &:before {
+            .sprite(@order-menu);
+            transform: scale(0.65);
         }
     }
 
@@ -337,6 +358,49 @@
     .about {
         margin: 80px;
         font-size: 30px;
+    }
+
+    .go-top {
+        display: none;
+    }
+
+    .slider {
+        .swiper-button-next, 
+        .swiper-button-prev {
+            bottom: 80px;
+        }
+    }
+
+    .order-form {
+        padding: 30px;
+    }
+
+    .order-form__title {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+
+    .modal--order {
+        width: 100%;
+        right: 0;
+        left: auto;
+
+        .modal-close {
+            right: 0;
+            left: auto;
+            width: 80px;
+            height: 90px;
+        }
+    }
+    
+    .form-line {
+        input {
+            font-size: 12px;
+        }
+
+        button {
+            width: 100%;
+        }
     }
 }
 

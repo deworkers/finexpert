@@ -44,8 +44,17 @@ $(document).ready(function() {
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
-        },
-        effect: 'fade',
+        }
+    });
+
+    mainSlider.on('slideChangeTransitionStart', function (event) {
+        $('.slider-descr__title, .slider-descr__text, .slider-descr__more').removeClass('fadeInUpSlide').addClass('hidden');
+
+    });
+
+    mainSlider.on('slideChangeTransitionEnd', function (event) {
+        $('.swiper-slide-active').find('.slider-descr__title, .slider-descr__text, .slider-descr__more').removeClass('hidden');
+        $('.swiper-slide-active').find('.slider-descr__title, .slider-descr__text, .slider-descr__more').addClass('fadeInUpSlide');
     });
 
 });

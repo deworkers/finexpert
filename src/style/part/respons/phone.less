@@ -25,12 +25,24 @@
     	transform: scale(.4);
 	}
 
+	.head-phone--menu {
+		top: 31px;
+	}
+
 	.head-order {
 		top: 10px;
 		&:before {
     		transform: scale(.4);
 		}
 	}
+
+	.head-order--menu {
+        top: 17px;
+        right: 6px;
+        &:before {
+            transform: scale(0.5);
+        }
+    }
 
 	.head-phone {
 		font-size: 12px;
@@ -51,6 +63,22 @@
 		height: 390px;
 	}
 
+	.slider {
+        .swiper-button-next, 
+        .swiper-button-prev {
+            bottom:60px;
+            transform: scale(0.7);
+        }
+
+        .swiper-button-next {
+        	right: 30px;
+        }
+
+        .swiper-button-prev {
+        	right: 80px;
+        }
+    }
+
 	.slider-descr__title {
 		font-size: 26px;
 		line-height: 35px;
@@ -61,6 +89,12 @@
 		font-size: 12px;
 		line-height: 18px;
 		margin-bottom: 20px;
+	}
+
+	.slider-descr__more {
+		position: absolute;
+		bottom: 60px;
+		left: 30px;
 	}
 
 	.about {
@@ -340,6 +374,10 @@
 		li a {
 			font-size: 14px;
 		}
+	}
+
+	.go-top {
+		display: none;
 	}
 
 }
