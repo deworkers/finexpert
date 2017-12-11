@@ -74,7 +74,7 @@ body {
 
 .head-menu {
     position: fixed;
-    top: 200px;
+    top: 260px;
     left: 5.5vw;
     display: inline-block;
     padding-right: 85px;
@@ -157,7 +157,7 @@ body {
     right: 1.5vw;
     transform: rotate(90deg);
     transform-origin: 50% 100%;
-    top: 150px;
+    top: 200px;
     padding-left: 75px;
     cursor: pointer;
 
@@ -210,6 +210,7 @@ body {
     left: 5.5vw;
     transform: rotate(-90deg);
     transform-origin: 0 100%;
+    z-index: 10;
 
     a {
         margin-right: 50px;
@@ -318,7 +319,14 @@ body {
     background: @green;
     padding: 15px 35px;
     display: inline-block;
+
+    &:hover {
+        background: #194a26;
+        color: #fff; 
+    }
 }
+
+
 
 .slider-img {
     width: 50%;
@@ -327,6 +335,19 @@ body {
     //background-attachment: fixed ;
     background-repeat: no-repeat;
     background-size: cover;
+
+    &:after {
+        content: "";
+        width: 100%;
+        height: 200px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: -webkit-linear-gradient(rgba(255,255,255,1) 0%, rgba(125,185,232,0) 100%);
+        background: -o-linear-gradient(rgba(255,255,255,1) 0%, rgba(125,185,232,0) 100%);
+        background: linear-gradient(rgba(255,255,255,1) 0%, rgba(125,185,232,0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#007db9e8',GradientType=0 );
+    }   
 }
 
 .about {
@@ -403,6 +424,7 @@ body {
     font-size: 17px;
     color: #f6f5e7;
     margin: 0 15px;
+    cursor: pointer;
 
     &.active {
         color: #f5f0ad;
@@ -415,7 +437,11 @@ body {
 }
 
 .tab-one {
-        
+    display: none;
+
+    &.open {
+        display: block;
+    }
 }
 
 .service-list {
@@ -454,6 +480,7 @@ body {
             width: 24px;
             height: 1px;
             background: #f5f0ad;
+            transition: all 0.3s;
         }
     }
 
@@ -495,6 +522,8 @@ body {
 
             &:before {
                 background: @red;
+                width: 15px;
+                left: -25px;
             }
         }
     }
@@ -510,6 +539,11 @@ body {
             display: inline-block;
             vertical-align: middle;
             padding: 10px 15px;
+
+            &:hover {
+                color: #3f6349;
+                background: #fbf7c7;
+            }
         }
 
         span {
@@ -530,6 +564,10 @@ body {
         vertical-align: middle;
         padding: 10px 15px;
         color: #fff;
+
+        &:hover {
+            background: #194a26;
+        }
     }
 
     span {
@@ -558,12 +596,26 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    height: 480px;
 }
 
 .news-one {
     width: 330px;
     margin-bottom: 70px;
     padding-left: 30px;
+
+    &:hover {
+        .news-one__img {
+            margin-left: -40px;
+        }
+
+        .news-one__date {
+            &:before {
+                width: 14px;
+                left: -40px;
+            }
+        }
+    }
 }
 
 .news-one__img {
@@ -589,6 +641,7 @@ body {
         position: absolute;
         top: 7px;
         left: -45px;
+        transition: all 0.3s;
     }
 }
 
@@ -647,6 +700,12 @@ body {
     border: 1px solid #9fb1a4;
     padding: 8px 15px;
     top: -10px;
+
+    &:hover {
+        background: #fbf7c7;
+        border-color: #fbf7c7;
+        color: #3f6349;
+    }
 }
 
 .footer-middle {
@@ -698,8 +757,12 @@ body {
         color: #fff;
         padding-left: 60px;
         &:hover {
+            color: #f5f0ad;
             span {
                 border-bottom-color: transparent;
+                &:before {
+                    background: #f5f0ad;
+                }
             }
         }
     }
@@ -859,6 +922,8 @@ body {
 
         ul {
             left: 100%;
+            height: 100vh;
+            overflow: hidden;
         }
     } 
 }
@@ -943,9 +1008,21 @@ body {
             border: none;
             outline: none;
             cursor: pointer;
+
+            &:hover {
+                background: #fbf7c7;
+            }
         }
     }
 
+    .j-submenu-box {
+        overflow: hidden;
+
+        .os-scrollbar-handle {
+            background: #5a7a63;
+            width: 8px;
+        }
+    }
 
 
 @media screen and (min-width: 1024px) {

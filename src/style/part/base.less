@@ -53,6 +53,11 @@ a {
     outline: none;
     text-decoration: none;
     transition: all 0.3s;
+
+    &:hover {
+        color: @red;
+        border-bottom-color: transparent;
+    }
 }
 
 button {
@@ -156,7 +161,7 @@ ul li, ol li{
     left: 0;
     z-index: 10000;
     display: none;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .modal {
@@ -185,29 +190,40 @@ ul li, ol li{
 .modal--menu  {             // во весь экран
     width: 40vw;
     min-height: 100%;
+    left:  -40vw;
     position: absolute;
-    left: 10vw;
     top: 0;
     background: #3f6349;
     padding: 0;
-    display: none;
+    display: block;
     margin: 0;
+    transition: left 0.3s;
+
+    &.open {
+        left: 10vw;
+    }
 }
 
 .modal--order  {             // во весь экран
     width: 40vw;
     min-height: 100%;
     position: absolute;
-    right: 10vw;
+    right: -40vw;
+    left: auto;
     top: 0;
     background: #3f6349;
     padding: 0;
-    display: none;
+    display: block;
     margin: 0;
+    transition: right 0.3s;
 
     .menu-close {
         right: auto;
         left: 100%; 
+    }
+
+    &.open {
+        right: 10vw;
     }
 }
 

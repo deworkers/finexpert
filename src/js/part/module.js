@@ -23,24 +23,27 @@ $(document).ready(function() {
     // для открытия модалки нужна ссылка вида <a href="#name"></a> и класс "open_modal"
     // будет открыта модалка с id="name"
     open_modal.click( function(event){
-        modal.fadeOut(200);
+        //modal.fadeOut(200);
+        modal.removeClass('open');
         event.preventDefault(); 
         var div = $(this).attr('href'); 
-        overlay.fadeIn(400);
-        $(div).fadeIn(400);
+        overlay.fadeIn(300);
+        $(div).addClass('open');
         $('html, body').addClass('j-noScroll');
+        
     });
 
     close.click(function() {
-        modal.fadeOut(200);
-        overlay.fadeOut(200);
+        modal.removeClass('open');
+        overlay.fadeOut(300);
         $('html, body').removeClass('j-noScroll');
+        $('.menu-one').removeClass('open');
     });
 
     overlay.click(function(event) {
         if ( $( event.target ).attr('id') == 'overlay' ) {
-            $(this).fadeOut(200);
-            modal.fadeOut(200);
+            $(this).hide();
+            modal.removeClass('open');
             $('html, body').removeClass('j-noScroll');
         }
     });

@@ -137,9 +137,9 @@
 
 	.service-one {
 		width: 100%;
-		padding: 60px 30px 0;
+		padding: 50px 25px 0;
 		span {
-			font-size: 18px;
+			font-size: 16px;
 			line-height: 28px;
 		}
 	}
@@ -209,8 +209,12 @@
 	.footer-menu {
 		margin-bottom: 20px;
 		a {
-			font-size: 14px;
+			font-size: 13px;
 			margin-right: 15px;
+
+			&:last-child {
+				margin-right: 0;
+			}
 		}
 	}
 
@@ -284,7 +288,11 @@
 
 	.modal--menu {
 		width: 100%;
-		left: 0;
+		left: -100%;
+
+		&.open {
+			left: 0;
+		}
 	}
 
 	.menu-logo {
@@ -370,6 +378,7 @@
 
 	.menu-list ul ul {
 		padding: 90px 60px 30px;
+		min-height: ~'calc(100vh - 161px)';
 
 		li a {
 			font-size: 14px;

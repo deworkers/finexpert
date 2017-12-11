@@ -177,6 +177,9 @@
             bottom: 120px;
         }
     }
+    .news-list {
+        height: 450px;
+    }
 }
 
 @media screen and (max-width: 1360px) {
@@ -260,12 +263,18 @@
 
     .modal--menu {
         width: 43.5vw;
-        left: 6.5vw;
+        left: -43.5vw;
+        &.open {
+            left: 6.5vw;
+        }
     }
 
     .modal--order {
         width: 43.5vw;
-        right: 6.5vw;
+        right: -43.5vw;
+        &.open {
+            right: 6.5vw;
+        }
     }
 
     @menu-padding: 50px;
@@ -292,5 +301,8 @@
 
     .go-top {
         right: 2vw;
+    }
+    .news-list {
+        height: 420px;
     }
 }
