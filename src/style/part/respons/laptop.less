@@ -55,7 +55,8 @@
 
     .footer-inn,
     .service,
-    .slider {
+    .slider,
+    .top {
         width: 80vw;
     }
 
@@ -108,14 +109,16 @@
         padding: 120px 70px 0;
     }
 
-    .slider-descr__title {
+    .slider-descr__title,
+    .top-descr__title  {
         font-size: 44px;
         line-height: 55px;
         margin-bottom: 30px;
         width: 430px;
     }
 
-    .slider-descr__text {
+    .slider-descr__text,
+    .top-descr__text {
         font-size: 15px;
         line-height: 26px;
         max-width: 430px;
@@ -180,13 +183,33 @@
     .news-list {
         height: 450px;
     }
+
+    .news-one__img {
+        width: 290px;
+        height: 220px;
+    }
+
+    .top {
+        height: ~'calc(100vh - 120px)';
+        margin-bottom: 60px;
+    }
+
+    .scroll-bottom {
+        bottom: -40px;
+
+        &:before {
+            height: 30px;
+            bottom: 25px;
+        }
+    }
 }
 
 @media screen and (max-width: 1360px) {
     .footer-inn,
     .service,
     .slider,
-    .head-top {
+    .head-top,
+    .top {
         width: 87vw;
     }
 
@@ -249,7 +272,7 @@
 
     .head-order {
         top: 110px;
-        right: -2vw;
+        right: -3vw;
     }
 
     .menu-close {
@@ -304,5 +327,14 @@
     }
     .news-list {
         height: 420px;
+    }
+
+    .news-one__img {
+        width: 230px;
+        height: 180px;
+    }
+
+    .top {
+
     }
 }
