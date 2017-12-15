@@ -140,12 +140,12 @@ $(document).ready(function() {
     $('input[name="phone"]').mask("+7(999) 999-99-99",{placeholder:"_"});
 
     var changeSert = function() {
-        $('.changePage').on('click', function(event) {
+        $('.changeSert').on('click', function(event) {
             event.preventDefault();
             var getid = $(this).data('id');
             $.ajax({
                 type: 'POST',
-                url: '/ajax/sert.php',
+                url: './ajax/sert.php',
                 data: {'blockId': getid}, // передача ID блока
                 success: function(data) {
                     $('#sert').find('.personal-modal').html(data);
@@ -163,7 +163,7 @@ $(document).ready(function() {
             var getid = $(this).data('id');
             $.ajax({
                 type: 'POST',
-                url: '/ajax/personal.php',
+                url: './ajax/personal.php',
                 data: {'blockId': getid}, // передача ID блока
                 success: function(data) {
                     $('#personal').find('.personal-modal').html(data);
