@@ -32,6 +32,13 @@ $(document).ready(function() {
 
     }
 
+    $('.personal-modal-descr').overlayScrollbars({ 
+        overflowBehavior : {
+            x : "hidden",
+            y : "scroll"
+        },
+    });
+
     $('.tab-list__one').on('click', function() {
         $(this).parents('.tab-list').find('.tab-list__one').removeClass('active');
         $(this).addClass('active');
@@ -166,6 +173,11 @@ $(document).ready(function() {
     } 
 
     changePersonal();
+
+
+    $('.table').each(function() {
+        $(this).wrap('<div class="table-box"></div>')
+    });
 });
 
 

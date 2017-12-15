@@ -359,10 +359,13 @@ body {
     height: ~'calc(100vh - 200px)';
     margin-bottom: 100px;
     background-position: 100% 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
+    //background-repeat: no-repeat;
+    //background-size: cover;
     display: flex;
     background-color: #f6f5e7;
+    background-image: url(../img/bg-top.jpg);
+    background-position: center 0;
+
 
     &:before {
         content: "";
@@ -390,6 +393,9 @@ body {
     margin-left: -50px;
     bottom: -62px;
     text-align: center;
+    z-index: 10;
+    animation-duration: 1s;
+    animation-name: scranims;
 
     &:before {
         content: "";
@@ -399,6 +405,8 @@ body {
         position: absolute;
         bottom: 35px;
         left: 50%;
+        animation-duration: 1s;
+        animation-name: scranim;
     }    
 }
 
@@ -1147,12 +1155,20 @@ body {
                 background: @color_text;
                 top: 7px;
                 left: 0px;
+                transition: all 0.3s;
             }
         }
 
         &:hover {
             .category__title {
                 border-bottom-color: transparent;
+            }
+
+            span {
+                &:before {
+                    width: 15px;
+                    left: 10px;
+                }
             }
         }
     }
@@ -1441,8 +1457,44 @@ body {
     font-size: 14px;
 }
 
+@keyframes redanim {
+    from {
+        height: 0px;
+        bottom: 25px;
+    }
+
+    to {
+        height: 50px;
+        bottom: -25px;
+    }
+}
+
+@keyframes scranim {
+    from {
+        height: 0px;
+        bottom: 85px;
+    }
+
+    to {
+        height: 50px;
+        bottom: 35px;
+    }
+}
+
+@keyframes scranims {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 .content-top {
-    background: #f6f5e7;
+    background-color: #f6f5e7;
+    background-image: url(../img/bg-top.jpg);
+    background-position: center 0;
     padding-top: 180px;
     min-height: 370px;
     width: 80vw;
@@ -1458,6 +1510,8 @@ body {
         position: absolute;
         bottom: -25px;
         left: 50%;
+        animation-duration: 1s;
+        animation-name: redanim;
     } 
 }
 
@@ -1814,7 +1868,7 @@ body {
 .personal-modal-descr {
     width: 50%;
     padding: 120px 100px 50px;
-    min-height: ~'calc(100vh - 150px)';
+    height: ~'calc(100vh - 150px)';
     border-left: 1px solid #f6f5e7;
 }
 
@@ -1846,7 +1900,7 @@ body {
 }
 
 .sert-one {
-    width: 350px;
+    width: 40%;
     word-spacing: -0.3em;
     height: 190px;
 }
@@ -2006,9 +2060,16 @@ body {
 .client {
     width: 48%;
     margin-bottom: 80px;
+    word-spacing: -0.3em;
+}
 
+.client-img {
+    width: 80px;
+    margin-right: 20px;
+    display: inline-block;
+    vertical-align: top;
     img {
-        margin-bottom: 20px;
+        width: 100%;
         display: block;
     }
 }
@@ -2032,8 +2093,43 @@ body {
     }
 }
 
-.client-descr {
+.client-left {
+    width: ~'calc(100% - 100px)';
+    display: inline-block;
+    vertical-align: top;
+}
+
+.top--service {
+    text-align: center;
+    height: auto !important;
     
+    .slider-descr {
+        padding-top: 80px; 
+        width: 100%;
+    }
+
+    .top-back {
+        display: inline;
+        border-bottom: 1px solid  #bac8bd;
+        &:before {
+            display: none;
+        }
+    }
+
+    .top-descr__title {
+        margin-top: 30px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .top-price {
+        left: 0;
+        width: 100%;
+        text-align: center;
+        bottom: auto;
+        position: relative;
+        margin-bottom: 50px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -2087,6 +2183,8 @@ body {
         transform: none;
       }
     }
+
+
 
     .fadeInUpSlide {
         animation-duration: 1s;
