@@ -41,6 +41,15 @@ $(document).ready(function() {
         $(this).parents('.tabs').find('.tab-one').eq(idx).show().addClass('open');
     });
 
+    $('.price-tab-list__one').on('click', function() {
+        $(this).parents('.price-tab-list').find('.price-tab-list__one').removeClass('active');
+        $(this).addClass('active');
+        idx = $(this).index();
+
+        $('.price-tabs').find('.price-tab').hide().removeClass('open');
+        $('.price-tabs').find('.price-tab').eq(idx).show().addClass('open');
+    });
+
     var mainSlider = new Swiper('.slider', {
         speed: 400,
         spaceBetween: 30,
@@ -61,7 +70,102 @@ $(document).ready(function() {
         $('.swiper-slide-active').find('.slider-descr__title, .slider-descr__text, .slider-descr__more').addClass('fadeInUpSlide');
     });
 
+    $("#order-form").validate({
+        errorElement: "em",
+        rules:{
+            name:{
+                required: true
+            },
+            phone:{
+                required: true
+            }
+        },
 
+        messages:{
+            name:{
+                required: "Поле обязательное для заполнения",
+            },
+            phone:{
+                required: "Поле обязательное для заполнения",
+            },
+        },
+
+        submitHandler: function(form) {
+            $('.order-form').html('<div class="order-form__title">Ваша заявка отправлена</div>')
+        }
+    });
+
+    $("#service-order").validate({
+        errorElement: "em",
+        rules:{
+            name:{
+                required: true
+            },
+            phone:{
+                required: true
+            },
+            personal: {
+                required: true
+            }
+        },
+
+        messages:{
+            name:{
+                required: "Поле обязательное для заполнения",
+            },
+            phone:{
+                required: "Поле обязательное для заполнения",
+            },
+            personal: {
+                required: "Вы должны согласиться на обработку персональных данных"
+            }
+        },
+
+        submitHandler: function(form) {
+            $('.service-order').html('<div class="content"><div class="form-title">Ваша заявка отправлена</div></div>')
+        }
+    });
+
+    $('input[type="checkbox"]').on('change', function() {
+        $(this).next('.error').remove();
+    });
+
+    $('input[name="phone"]').mask("+7(999) 999-99-99",{placeholder:"_"});
+
+    var changeSert = function() {
+        $('.changePage').on('click', function(event) {
+            event.preventDefault();
+            var getid = $(this).data('id');
+            $.ajax({
+                type: 'POST',
+                url: '/ajax/sert.php',
+                data: {'blockId': getid}, // передача ID блока
+                success: function(data) {
+                    $('#sert').find('.personal-modal').html(data);
+                    changeSert();
+                }
+            });
+        });
+    } 
+
+    changeSert();
+
+    var changePersonal = function() {
+        $('.changePersonal').on('click', function(event) {
+            event.preventDefault();
+            var getid = $(this).data('id');
+            $.ajax({
+                type: 'POST',
+                url: '/ajax/personal.php',
+                data: {'blockId': getid}, // передача ID блока
+                success: function(data) {
+                    $('#personal').find('.personal-modal').html(data);
+                }
+            });
+        });
+    } 
+
+    changePersonal();
 });
 
 

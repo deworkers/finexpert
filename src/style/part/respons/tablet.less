@@ -2,7 +2,7 @@
 @import "../mixin.less";
 @import "../base.less";
 
-@media screen and (max-width: 1023px) { // планшет вертикально
+@media screen and (max-width: 1024px) { // планшет вертикально
     .head-left,
     .head-service,
     .head-price {
@@ -13,7 +13,8 @@
     .service,
     .slider,
     .head-top,
-    .top {
+    .top,
+    .content-top {
         width: 100%;
     }
 
@@ -22,7 +23,7 @@
     }
 
     .scroll-bottom {
-        display: none;
+
     }
 
     .slider-img {
@@ -306,6 +307,10 @@
         padding: 0 60px;
     }
 
+    .service-one-inn {
+        width: 100%;
+    }
+
     .service {
         padding: 120px 0;
 
@@ -424,12 +429,19 @@
     }
     
     .form-line {
-        input {
+        input[type="text"] {
             font-size: 12px;
         }
 
+
         button {
             width: 100%;
+        }
+    }
+
+    .service-order .form-line {
+        textarea {
+            font-size: 12px;
         }
     }
 
@@ -459,6 +471,102 @@
 
     .category__title {
         font-size: 20px;
+    }
+
+    .service-list-one {
+        padding: 60px 100px;
+    }
+
+    .service-one__title {
+        font-size: 30px;
+    }
+
+    .service-one__price {
+        font-size: 15px;
+    }
+
+    .top-price,
+    .top-date {
+        bottom: 60px;
+        left: 60px;
+    }
+
+    .select-list__one {
+        font-size: 12px;
+    }
+
+    .service-bottom__back {
+        margin: 50px 0 50px;
+    }
+
+    .content-top {
+        min-height: 200px;
+        padding-top: 90px;
+    }
+
+    .content-top__title {
+        font-size: 34px;
+    }
+
+    .news-inn {
+        padding: 0 60px;
+    }
+
+    .pagination {
+        padding: 60px 0 90px;
+    }
+    .personal-one {
+        width: 190px;
+        margin-bottom: 50px;
+    }
+
+    .personal-one__img {
+        height: 250px;
+    }
+
+    .personal-one__name {
+        font-size: 20px;
+    }
+
+    .personal-modal-descr {
+        padding: 50px 40px;
+
+        h2 {
+            font-size: 24px;
+        }
+    }
+
+    .personal-modal-photo {
+        width: 50%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+
+    .sert-one {
+        width: ~'calc(50% - 20px)';
+    }
+
+    .sert-nav {
+        bottom: 50px;
+        right: ~'calc(50% - 140px)';
+    }
+
+    .top--error {
+        height: ~'calc(100vh - 200px)' !important;
+    }
+
+    .error-title {
+        font-size: 24px;    
+    }
+
+    .error-text {
+        font-size: 16px;
     }
 }
 

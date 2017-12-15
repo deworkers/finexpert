@@ -1,0 +1,55 @@
+ <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script type="text/javascript">
+            ymaps.ready(function () {
+                var myMap = new ymaps.Map('map', {
+                        center: [56.82978680017758,60.60935187301636],
+                        zoom: 16,
+                        controls: []
+                    }, {
+                    }),
+                 
+                    place = new ymaps.Placemark([
+                        56.82978680017758,60.60935187301636
+                        ], {
+                        iconCaption: 'г. Екатеринбург, Горького, 65'
+                    }, {
+                        iconLayout: 'default#image',
+                        iconImageHref: 'img/map.png',
+                        iconImageSize: [67, 58],
+                        iconImageOffset: [-22, -58]
+                    });
+                
+                    myMap.geoObjects.add(place);
+                    myMap.behaviors.disable('scrollZoom');
+                    myMap.controls.add('zoomControl', {
+                        size: 'small',
+                        float: 'right',
+                        position: {
+                            bottom: '50px',
+                            right: '30px'
+                        }
+                    });
+                
+            }); 
+</script>
+
+<div class="top top--contact">
+    <div class="slider-descr top-descr">
+        <div class="top-descr__title fadeInUpSlide">
+            Контакты
+        </div>
+        <div class="slider-descr__text">
+            <h2>ООО «ФинЭксперт – Екатеринбург»</h2>
+
+            <p>Адрес: 620144, г. Екатеринбург, Горького, 65,<br>
+            3 подъезд, 5 этаж, офисы 302-303</p>
+
+            <p>Т.: +7 (343) 386-2000<br>
+            @: <a href="#">info@FinExpert-Ekb.ru</a></p>
+        </div> 
+        
+        
+    </div>
+    <div class="slider-img wow fadeInDown" id="map"></div>
+    <div class="scroll-bottom">Крути вниз</div> 
+</div>

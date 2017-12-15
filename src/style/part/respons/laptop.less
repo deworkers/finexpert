@@ -5,8 +5,9 @@
 @media screen and (max-width: 1600px) {
     .news,
     .service-list,
-    .wrap {
-        width: 1020px;
+    .wrap,
+    .news-inn {
+        max-width: 1020px;
         margin: 0 auto;
     }
 
@@ -56,7 +57,9 @@
     .footer-inn,
     .service,
     .slider,
-    .top {
+    .top,
+    .service-one-inn,
+    .content-top {
         width: 80vw;
     }
 
@@ -202,6 +205,20 @@
             bottom: 25px;
         }
     }
+
+    .top-price,
+    .top-date {
+        bottom: 70px;
+        left: 70px;
+    }
+
+    .personal-one {
+        width: 260px;
+    }
+
+    .personal-one__img {
+        height: 320px;
+    }
 }
 
 @media screen and (max-width: 1360px) {
@@ -209,7 +226,9 @@
     .service,
     .slider,
     .head-top,
-    .top {
+    .top,
+    .service-one-inn,
+    .content-top {
         width: 87vw;
     }
 
@@ -222,8 +241,9 @@
 
     .news,
     .service-list,
-    .wrap {
-        width: 800px;
+    .wrap,
+    .news-inn {
+        max-width: 800px;
         margin: 0 auto;
     }
 
@@ -323,7 +343,7 @@
     }
 
     .go-top {
-        right: 2vw;
+        right: 1.3vw;
     }
     .news-list {
         height: 420px;
@@ -336,5 +356,82 @@
 
     .top {
 
+    }
+
+    .service-list-one {
+        padding: 60px 80px;
+    }
+
+    .form-title {
+        font-size: 30px;
+    }
+
+    .top-price {
+        bottom: 70px;
+        left: 70px;
+    }
+
+    .service-bottom__back {
+        margin: 50px 0 70px;
+    }
+
+    .news-inn-one {
+        margin-bottom: 80px;
+    }
+
+    .news-inn-one__img {
+        height: 300px;
+        width: ~'calc(50% - 20px)';
+    }
+
+    .news-inn-left {
+        width: ~'calc(50% - 20px)';
+    }
+
+    .news-inn-one__date {
+        margin-bottom: 30px;
+    }
+
+    .news-inn-one__title {
+        font-size: 20px;
+    }
+
+    .news-inn-one__descr {
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+    .news-inn-one__more {
+        font-size: 12px;
+    }
+
+    .content-top {
+        min-height: 240px;
+        padding-top: 120px;
+        margin-bottom: 80px;
+        &:before {
+            height: 30px;
+            bottom: -15px;
+        }
+    }
+
+    .content-top__title {
+        font-size: 44px;
+    }
+
+    .pagination {
+        padding: 60px 0 90px;
+    }
+
+    .personal-one {
+        width: 230px;
+    }
+
+    .personal-modal-descr {
+        padding: 80px 40px;
+    }
+    
+    .sert-nav {
+        right: ~'calc(50% - 150px)';
     }
 }

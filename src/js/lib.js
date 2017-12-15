@@ -9,3 +9,4 @@
 //= ../plugin/wow.js
 //= ../plugin/magnific-popup/jquery.magnific-popup.min.js
 //= ../plugin/overlayScrollbars/jquery.overlayScrollbars.min.js
+//= ../plugin/jquery.maskedinput.min.js

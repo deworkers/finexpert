@@ -79,10 +79,11 @@ h1 {
     .head(34px, 40px, normal, @color_text);
     font-weight: 700;
     font-family: @font-title;
+    text-align: center;
 }
 
 h2 {
-    .head(30px, 30px, normal, @color_text);
+    .head(28px, 30px, normal, @color_text);
     font-weight: 700;
     font-family: @font-title;
 }
@@ -98,8 +99,9 @@ h4 {
 }
 
 h5 {
-    .head(13px, 30px, normal, @color_text);
-    font-weight: 700;
+    .head(12px, 30px, normal, @color_text);
+    font-weight: 400;
+    text-transform: uppercase;
 }
 
 
@@ -107,18 +109,29 @@ table{
     border-collapse:collapse;
 }
 
+.contact-table {
+    width: 100%;
+    td {
+        width: 50%;
+        vertical-align: top;
+        padding: 100px 40px;
+    }
+}
+
 .table {
     width: 100%;
     td{
-        border: 1px solid #ddd;
-        padding: 10px;
+        border: 1px solid #dadada;
+        padding: 15px 20px;
+        font-size: 16px;
     }
 
     th {
-        padding: 10px;
+        padding: 15px 20px;
         text-align: left;
-        background: #ddd;
-        border: 1px solid #aaa;
+        background: #f6f5e7;
+        border: 1px solid #dadada;
+        vertical-align: top;
     }
 }
 
@@ -162,6 +175,7 @@ ul li, ol li{
         }
     }
 
+}
     ol {
         counter-reset: counter;
         li {
@@ -179,7 +193,6 @@ ul li, ol li{
             }
         }
     }
-}
 
 mark {
     display: block;
