@@ -31,7 +31,7 @@ body {
 }
 
 .head-top {
-    width: 75vw;
+    width: 70vw;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -40,7 +40,7 @@ body {
 }
 
 .head-logo {
-    top: 40px;
+    top: 32px;
     left: 30px;
 
     img {
@@ -65,7 +65,7 @@ body {
     border-bottom: 1px solid #bac8bd;
     height: 22px;
     font-weight: 700;
-    margin-right: 30px;
+    margin-right: 60px;
 }
 
 .head-phone {
@@ -74,7 +74,7 @@ body {
     font-size: 32px;
     font-weight: 700;
     text-decoration: none;
-    right: 30px;
+    right: 60px;
     bottom: 0px;
 
     span {
@@ -89,7 +89,7 @@ body {
 .head-menu {
     position: fixed;
     top: 260px;
-    left: 5.5vw;
+    left: 6.3vw;
     display: inline-block;
     padding-right: 85px;
     transform: rotate(-90deg);
@@ -101,8 +101,8 @@ body {
         display: block;
         position: absolute;
         top: -8px;
-        right: 0;
-        transform: rotate(90deg) scale(0.6);
+        right: -3px;
+        transform: rotate(90deg) scale(0.7);
     }
 
     &:after {
@@ -140,7 +140,7 @@ body {
 
 .go-top {
     position: fixed;
-    right: 3.5vw;
+    right: 4.8vw;
     bottom: 30px;
     width: 30px;
     height: 30px;
@@ -172,7 +172,7 @@ body {
 
 .head-order {
     position: fixed;
-    right: 1.5vw;
+    right: 2.7vw;
     transform: rotate(90deg);
     transform-origin: 50% 100%;
     top: 200px;
@@ -210,10 +210,11 @@ body {
         content: "";
         .sprite(@phone);
         position: absolute;
-        top: -18px;
-        right: 90px;
+        top: -20px;
+        right: 93px;
+        width: 61px;
         height: 61px;
-        transform: rotate(-90deg) scale(0.5);
+        transform: rotate(-90deg) scale(0.65);
         transition: all 0.3s;
     }
 }
@@ -224,8 +225,8 @@ body {
 
 .head-social {
     position: fixed;
-    bottom: 60px;
-    left: 5.5vw;
+    bottom: 85px;
+    left: 6.3vw;
     transform: rotate(-90deg);
     transform-origin: 0 100%;
     z-index: 10;
@@ -237,7 +238,7 @@ body {
 }
 
 .slider {
-    width: 80vw;
+    width: 75vw;
     margin: 0 auto;
     background: #f6f5e7;
     overflow: hidden;
@@ -311,17 +312,17 @@ body {
 .slider-descr {
     width: 50%;
     background: #f6f5e7;
-    padding: 20vh 80px 0 100px;
+    padding: 20vh 80px 0 110px;
 
 }
 
 .slider-descr__title,
 .top-descr__title {
-    font-size: 64px;
+    font-size: 50px;
     font-family: @font-title;
     width: 520px;
-    line-height: 75px;
-    margin-bottom: 40px;
+    line-height: 65px;
+    margin-bottom: 55px;
 }
 
 .slider-descr__text,
@@ -355,6 +356,7 @@ body {
     background: @green;
     padding: 15px 35px;
     display: inline-block;
+    text-transform: uppercase;
 
     &:hover {
         background: #194a26;
@@ -363,7 +365,7 @@ body {
 }
 
 .top {
-    width: 80vw;
+    width: 75vw;
     margin: 0 auto;
     height: ~'calc(100vh - 200px)';
     margin-bottom: 100px;
@@ -446,7 +448,7 @@ body {
     font-family: @font-title;
     font-size: 36px;
     max-width: 750px;
-    margin: 110px auto 80px;
+    margin: 115px auto 75px;
     text-align: center;
 
     a {
@@ -462,7 +464,7 @@ body {
 
 .service {
     background: @green;
-    width: 80vw;
+    width: 75vw;
     margin: 0 auto;
     padding: 200px 0px;
     background-image: url(../img/bg.png);
@@ -548,9 +550,9 @@ body {
     font-family: @font-title;
     color: #fff;
     display: block;
-    padding: 85px 40px 0;
-    height: 260px;
-    width: 350px;
+    padding: 65px 40px 0;
+    height: 245px;
+    width: 335px;
     display: inline-block;
     vertical-align: top;
     position: relative;
@@ -586,7 +588,7 @@ body {
         z-index: 1;
         background: #5a7a63;
         transition: all 0.4s;
-        clip-path: polygon(0% 0%, 50% 30px, 100% 0%, 100% 230px, 50% 260px, 0 230px);
+        clip-path: polygon(0% 0%, 50% 30px, 100% 0%, 100% 215px, 50% 245px, 0 215px);
     }
 
     span {
@@ -631,6 +633,7 @@ body {
             display: inline-block;
             vertical-align: middle;
             padding: 10px 15px;
+            font-size: 14px;
 
             &:hover {
                 color: #3f6349;
@@ -692,9 +695,9 @@ body {
 }
 
 .news-one {
-    width: 330px;
+    width: 325px;
     margin-bottom: 70px;
-    padding-left: 30px;
+    padding-left: 25px;
 
     &:hover {
         .news-one__img {
@@ -711,10 +714,10 @@ body {
 }
 
 .news-one__img {
-    margin-left: -30px;
-    margin-bottom: 20px;
+    margin-left: -40px;
+    margin-bottom: 30px;
     display: block;
-    width: 320px;
+    width: 330px;
     height: 260px;
     background-position: center;
     background-size: 105%;
@@ -726,7 +729,7 @@ body {
 .news-one__date {
     font-size: 10px;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     font-weight: 700;
 
     &:before {
@@ -743,7 +746,7 @@ body {
 
 .news-one__title {
     font-size: 21px;
-    line-height: 28px;
+    line-height: 32px;
     border-bottom: 1px solid #9cafa1;
 
     &:hover {
@@ -758,7 +761,7 @@ body {
 
 .footer-inn {
     background: @green;
-    width: 80vw;
+    width: 75vw;
     margin: 0 auto;
     padding: 90px 0px;
     background-image: url(../img/bg.png);
@@ -810,7 +813,7 @@ body {
 }
 
 .footer-logo {
-    width: 25%;
+    width: 30%;
 
     img {
         width: 120px;
@@ -818,8 +821,8 @@ body {
 }
 
 .footer-text {
-    width: 30%;
-    margin-bottom: 80px;
+    width: 35%;
+    margin-bottom: 55px;
 
     p {
         font-size: 14px;
@@ -852,6 +855,7 @@ body {
         position: relative;
         color: #fff;
         padding-left: 60px;
+        font-size: 14px;
         &:hover {
             color: #f5f0ad;
             span {
@@ -888,9 +892,13 @@ body {
 
 .footer-bottom {
     text-align: center;
-    padding: 40px 0;
+    padding: 45px 0;
     color: #737373;
     font-size: 12px;
+
+    em {
+        margin: 0 20px;
+    }
 }
 
 .icon-vk {
@@ -1190,7 +1198,7 @@ body {
     }
 
 .service-one-inn {
-    width: 80vw;
+    width: 75vw;
     margin: 0 auto;
 }
 
@@ -1199,7 +1207,7 @@ body {
 }
 
 .service-list-inn {
-    margin-bottom: 50px;
+    //margin-bottom: 50px;
 }
 
 .service-list-one {
@@ -1385,11 +1393,15 @@ body {
 
         &:checked {
             & + label {
+                &:before {
+                    background: @green;
+                    border-color: @green;
+                }
                 &:after {
                     content: "";
                     position: absolute;
-                    top: 6px;
-                    left: 8px;
+                    top: 7px;
+                    left: 9px;
                     transform: rotate(45deg);
                     width: 5px;
                     height: 7px;
@@ -1408,7 +1420,8 @@ body {
             left: 0px;
             width: 24px;
             height: 24px;
-            background: @green;
+            background: #fff;
+            border: 1px solid #dadada;
         }
     }
 
@@ -1423,15 +1436,26 @@ body {
     margin-bottom: 50px;
     font-family: @font-title;
     display: block;
+    position: relative;
+    padding-left: 40px;
 
     &:before {
         content: "";
         display: inline-block;
+        position: absolute;
+        top: 7px;
+        left: 0;
         width: 24px;
         height: 1px;
-        vertical-align: middle;
         background: @green;
-        margin-right: 10px;
+        transition: all 0.2s;
+    }
+
+    &:hover {
+        &:before {
+            width: 15px;
+            left: 10px;
+        }
     }
 }
 
@@ -1440,14 +1464,27 @@ body {
     text-transform: uppercase;
     display: inline-block;
     margin: 60px 0 90px;
+    position: relative;
+    padding-left: 40px;
     &:before {
         content: "";
         display: inline-block;
+        position: absolute;
+        top: 7px;
+        left: 0;
         width: 24px;
         height: 1px;
         vertical-align: middle;
         background: @green;
         margin-right: 10px;
+        transition: all 0.2s;
+    }
+
+    &:hover {
+        &:before {
+            width: 15px;
+            left: 9px;
+        }
     }
 }
 
@@ -1506,7 +1543,7 @@ body {
     background-position: center 0;
     padding-top: 180px;
     min-height: 370px;
-    width: 80vw;
+    width: 75vw;
     margin: 0 auto;
     margin-bottom: 130px;
     text-align: center;
@@ -2016,7 +2053,7 @@ body {
     display: table;
     text-align: center;
     margin-bottom: 0 !important;
-    height: ~'calc(100vh - 160px)' !important;
+    height: ~'calc(100vh - 210px)' !important;
 
     &:before {
         content: "";
@@ -2139,6 +2176,18 @@ body {
         bottom: auto;
         position: relative;
         margin-bottom: 50px;
+    }
+
+    &:before {
+        display: none;
+    }
+}
+
+.top--contact {
+    background-image: none;
+
+    &:before {
+        display: none;
     }
 }
 
