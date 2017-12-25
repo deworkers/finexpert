@@ -177,10 +177,24 @@
     
     .menu-close {
         height: 200px;
+        width: 7.5vw;
     }
 
     .modal--menu {
         padding: 40px 0px;
+        width: 42.5vw;
+        left: -42.5vw;
+        &.open {
+            left: 7.5vw;
+        }
+    }
+
+    .modal--order {
+        width: 42.5vw;
+        right: -42.5vw;
+        &.open {
+            right: 7.5vw;
+        }
     }
 
     @menu-padding: 70px;
@@ -221,7 +235,7 @@
 
     .top {
         height: ~'calc(100vh - 120px)';
-        margin-bottom: 60px;
+        margin-bottom: 40px;
     }
 
     .scroll-bottom {

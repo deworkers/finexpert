@@ -229,7 +229,7 @@ body {
     left: 6.3vw;
     transform: rotate(-90deg);
     transform-origin: 0 100%;
-    z-index: 10;
+    z-index: 10000;
 
     a {
         margin-right: 50px;
@@ -368,7 +368,7 @@ body {
     width: 75vw;
     margin: 0 auto;
     height: ~'calc(100vh - 200px)';
-    margin-bottom: 100px;
+    margin-bottom: 40px;
     background-position: 100% 100%;
     //background-repeat: no-repeat;
     //background-size: cover;
@@ -458,6 +458,11 @@ body {
         &:hover {
             border-bottom-color: transparent;
         }
+    }
+
+    p {
+        font-size: 36px;
+        line-height: 48px;
     }
 }
 
@@ -926,7 +931,7 @@ body {
 }
 
 .menu-close {
-    width: 10vw;
+    width: 12.5vw;
     height: 340px;
     background: #3f6349;
     position: absolute;
@@ -979,7 +984,7 @@ body {
 
     ul ul {
         position: absolute;
-        width: 40vw;
+        width: 37.5vw;
         height: 100%;
         left: 0;
         top: 0;
@@ -1030,6 +1035,11 @@ body {
             overflow: hidden;
         }
     } 
+}
+
+.menu-one .current {
+    color: #fff;
+
 }
 
 .menu-logo {
@@ -1640,11 +1650,9 @@ body {
     }
 
     &:hover {
-        a {
-            color: @green;
-            span {
-                color: @green !important;
-            }
+        color: #d32d23 ;
+        span {
+            color: #d32d23 !important;
         }
     }
 }
@@ -2158,8 +2166,13 @@ body {
     .top-back {
         display: inline;
         border-bottom: 1px solid  #bac8bd;
+        padding-left: 0;
         &:before {
             display: none;
+        }
+
+        &:hover {
+            border-bottom-color: transparent;
         }
     }
 
